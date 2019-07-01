@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const urlEncoded = bodyParser.urlencoded({extended: false})
 
-const dummyData = [{taskItem: "x" },{taskItem: "y" },{taskItem: "z" }];
+const dummyData = [{taskItem: "Work on my portfolio" },{taskItem: "Code and watch anime" },{taskItem: "Sleep" }];
 
 // setting up
 const app = express();
@@ -24,14 +24,16 @@ app.get('/tasks', function (req, res) {
 
 // Post for tasks: posting a task
 app.post('/tasks', urlEncoded, function(req, res){
-
-  dummyData.push(req.body.task)
+    let incomingItem = {}
+    incomingItem.taskItem = req.body.task
+  dummyData.push(incomingItem)
   console.log(dummyData)
+  res.redirect('/tasks')
 
 });
 
-app.listen(3000, function(err){
+app.listen(4000, function(err){
     if (err)
         console.log(err)
-    console.log('Server is live on port 3000')
-})
+    console.log('Server is live on port 4000')
+}) 
