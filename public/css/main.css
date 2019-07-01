@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #000033;
 }
 
@@ -9,7 +9,7 @@ h1 {
 }
 
 .container {
-    background-color: #0c1421;
+    background-color: #0c1521;
     margin-bottom: 20px;
     padding-bottom: 15px;
 }
@@ -19,11 +19,11 @@ h1 {
 }
 
 .btn {
-    background-color: #ec1421;
+    background-color: #f11421;
 }
 
 li:hover {
-text-decoration: line-through;
-background: rgb(0,0,0,0.2);
-cursor: pointer;
+    text-decoration: line-through;
+    background: rgb(0,0,0,0.2);
+    cursor: pointer;
 }
