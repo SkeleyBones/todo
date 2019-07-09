@@ -12,12 +12,13 @@
      <div class="container mx-auto text-center">
         <h1>Ninja Tasker</h1>
         <form action="/tasks" method="POST" class="mt-0">
+    let task = { taskItem: req.body.task }
             <input class="form-control form-control-lg" type="text" name="taskItem" placeholder="Add item ..." required>
             <button type="submit" class="btn btn-primary btn-lg mt-1 mb-5 btn-block">Add Mission</button>
         </form>
         <ul class="list-group list-group-flush mt-5 text-light">
-            <% for ( let i=0; i < taskToDo.length;  i++ ){%>
-                <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].taskItem %></li>
+            <% for ( let i=0; i < taskToDo.length;  i++ ) { %>
+                <li class="list-group-item" id="<%= taskToDo[i].id %>" ><%= taskToDo[i].taskItem %></li>
             <% } %>
         </ul>
     </div>
